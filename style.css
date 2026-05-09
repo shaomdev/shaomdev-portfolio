@@ -98,5 +98,50 @@ body {
   border-color: var(--text-main);
   opacity: 1;
 }
-
 /* header - finished */
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__inner {
+  letter-spacing: 1.2px;
+}
+
+.hero__title {
+  font-size: 80px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  background: linear-gradient(
+    180deg,
+    var(--text-main) 0%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero__subtitle {
+  text-align: center;
+  font-size: 20px;
+}
+
+.hero__subtitle span {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-style: italic;
+  color: var(--accent-blue);
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+
+.hero:hover .hero__subtitle span {
+  text-shadow: 0 0 15px var(--accent-blue);
+  letter-spacing: 1px;
+}
+/* hero - finished */
