@@ -6,6 +6,10 @@
   --accent-blue: #0071e3; /* Классический синий Apple для кнопок */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -154,3 +158,30 @@ body {
   letter-spacing: 1px;
 }
 /* hero - finished */
+
+.about {
+  padding: 120px 0;
+}
+
+.about__title {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.about__subtitle {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 24px;
+  line-height: 1.6;
+  color: var(--text-main);
+  text-align: center;
+}
+
+.about__subtitle:last-child {
+  color: var(--text-secondary);
+}
+/* about - finished */
