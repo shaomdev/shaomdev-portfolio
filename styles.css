@@ -181,7 +181,33 @@ body {
   text-align: center;
 }
 
-.about__subtitle:last-child {
+.about__subtitle--secondary {
   color: var(--text-secondary);
+}
+
+.about__skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 12px 24px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.skill-card:hover .skill-card__name {
+  color: var(--accent-blue);
 }
 /* about - finished */
