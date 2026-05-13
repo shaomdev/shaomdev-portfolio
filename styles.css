@@ -211,3 +211,131 @@ body {
   color: var(--accent-blue);
 }
 /* about - finished */
+
+.projects {
+  padding: 100px 0;
+}
+
+.projects__title {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-secondary);
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+/* Сетка для двух карточек */
+.projects__grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  flex: 1 1 calc(50% - 20px);
+  /* Делит строку ровно на 2 карточки с учетом gap */
+  min-width: 300px;
+  background-color: var(--bg-dark);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  overflow: hidden;
+  /* Чтобы картинка не вылезала за скругленные углы */
+  transition: all 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Контейнер для фото */
+.project-card__image-wrapper {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background-color: #111;
+}
+
+.project-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Картинка аккуратно заполняет блок без искажений */
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-card__img {
+  transform: scale(1.05);
+}
+
+.project-card__content {
+  padding: 30px;
+}
+
+.project-card__title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-main);
+}
+
+.project-card__description {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.project-tag {
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 6px 14px;
+  border-radius: 100px;
+  color: var(--text-main);
+}
+
+/* Обзор на проект */
+.project-card__link {
+  display: inline-block;
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.project-card__link:hover {
+  opacity: 0.9;
+  text-decoration: underline;
+}
+
+.project-card__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #121214 0%, #1a1a1e 100%);
+  /* Мягкий темный градиент */
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: color 0.4s ease;
+}
+
+/* Изюминка: при наведении на карточку текст-заглушка будет плавно белеть */
+.project-card:hover .project-card__placeholder {
+  color: var(--text-main);
+}
+/* projects - finished */
